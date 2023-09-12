@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Guilherme Andrade Matos, WEB, 200026656" content="Atividades sobre JavaScript">
+    <title>JavaScript</title>
+
+    <script>
+        function faixaEtaria(){
+       
+        var idade = document.frm1.idade.value;
+        var dados;
+        if(idade>=3 && idade<=10){
+       
+            dados = "Faixa Etaria: 3 a 10 "  + " \nSua idade: " +idade;
+       
+         }else if(idade>=11 && idade<=25){
+   
+            dados = "Faixa Etaria: 11 a 25 "  + " \nSua idade: " +idade;
+
+        }else if(idade>=36 && idade<=55){
+   
+            dados = "Faixa Etaria: 36 a 55 " +  " \nSua idade: " +idade;
+
+        }else if(idade>=56 && idade<=100){
+   
+            dados = "Faixa Etaria: 56 a 100 " + " \nSua idade: " +idade;
+    }
+
+        alert(dados);
+
+        }
+    </script>
+   
+</head>
+<body>
+ 
+    <form name="frm1">
+
+       Idade: <input type="number" name="idade"> </p>
+
+        <input type= "submit" value="Enviar"
+        onclick="faixaEtaria()" >
+        </form>
+
+
+</body>
+</html>
+
