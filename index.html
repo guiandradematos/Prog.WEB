@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Guilherme Andrade Matos, WEB, 200026656" content="Atividades sobre JavaScript">
+    <title>JavaScript</title>
+
+    <script>
+        function calcularIMC() {
+            var peso = parseFloat(document.getElementById('peso').value);
+            var altura = parseFloat(document.getElementById('altura').value);
+            
+            if ((peso) && (altura) && altura > 0) {
+                var imc = peso / (altura * altura);
+                let classe = "";
+
+                if (imc < 16.90) {
+                    classe = "Muito abaixo do peso";
+                } else if (imc < 18.40) {
+                    classe = "Abaixo do peso";
+                } else if (imc < 24.90) {
+                    classe = "Peso normal";
+                } else if (imc < 29.90) {
+                    classe = "Acima do peso";
+                } else  {
+                    classe = "Obesidade";
+                }
+
+                const resultado = "Seu IMC é " + imc.toFixed(2) + " - " + classe;
+                document.getElementById('resultado').innerHTML = resultado;
+            } else {
+                document.getElementById('resultado').innerHTML = "Seu peso e altura devem ser numeros válidos maiores que zero.";
+            s
+        }
+    }
+    </script>
+</head>
+<body>
+    <form id="meuFormulario">
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" required><br><br>
+        
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" name="altura" required><br><br>
+        
+        <input type="button" value="Calcular IMC" onclick="calcularIMC()">
+    </form>
+    <div id="resultado"></div>
+
+</body>
+</html>
