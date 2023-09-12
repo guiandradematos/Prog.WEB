@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Guilherme Andrade Matos, WEB, 200026656" content="Atividades sobre JavaScript">
+    <title>JavaScript</title>
+
+</head>
+<body>
+    <form id="formulario">
+        
+    <label for="login">Login</label>
+    <input type="text" id="login" name="login">
+    <p></p>
+    <label for="Senha"> Senha</label>
+    <input type="number" id="Senha" name="Senha">
+    <p></p>
+
+    <button onclick="verificarloginSenha">Enviar</button>
+
+    </form>
+    
+    <script>
+    
+     function verificarloginSenha(){
+
+        var Login= document.getElementById("login").value;
+        var Senha= document.getElementById("Senha").value;
+
+        if(Login == " " || Senha == " "){
+            
+            return false;
+            }
+            return true;
+        }
+        alert("Preencha os campos LOGIN e SENHA");
+    
+    
+    
+    </script>
+    
+
+
+</body>
+</html>
